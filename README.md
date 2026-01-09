@@ -1,42 +1,66 @@
-Chat DApp
+## Foundry
 
-A decentralized chat application built with **Solidity and React.js**.  
-This DApp enables users to register on the blockchain, add friends, and exchange messages securely through smart contracts without a centralized server.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
----
+Foundry consists of:
 
-## 🔍 Project Overview
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-This Chat DApp demonstrates a decentralized messaging application where:
+## Documentation
 
-- Users connect their wallets using MetaMask
-- User accounts are stored on a blockchain via smart contracts
-- Friend lists are managed on-chain
-- Messages are exchanged and recorded securely through smart contract functions
+https://book.getfoundry.sh/
 
-This architecture ensures censorship resistance, transparency, and ownership of user data.
+## Usage
 
----
+### Build
 
+```shell
+$ forge build
+```
 
----
+### Test
 
-## 🛠️ Technology Stack
+```shell
+$ forge test
+```
 
-| Component | Technology |
-|-----------|------------|
-| Smart Contracts | Solidity |
-| Frontend | React.js |
-| Wallet Integration | MetaMask |
-| Blockchain | Ethereum / Avalanche Testnet (configurable) |
-| Deployment Tooling | Hardhat / Truffle |
-| Library | Ethers.js or Web3.js |
+### Format
 
----
+```shell
+$ forge fmt
+```
 
+### Gas Snapshots
 
+```shell
+$ forge snapshot
+```
 
-Fork this repository
+### Anvil
 
-Create a new branch:
+```shell
+$ anvil
+```
 
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
